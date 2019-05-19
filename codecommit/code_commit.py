@@ -84,7 +84,7 @@ class codeCommit:
             repositoryDescription=repo_description
         )
 
-    # a method to setup the initial repo, create the file and some logic
+    # a method to setup the initial repo, create the file and some logic that will get the parent commit id and allow a new commit using that
     def post_data_to_repo(self, username, data_to_post, commits):
         author_name = username
         author_email = "Billy@Bob.com"
