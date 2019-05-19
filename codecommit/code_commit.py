@@ -58,7 +58,7 @@ class codeCommit:
                 },
             ]
         )
-
+    # A method to put a file, unfortunately needs the parent commit id so not great
     def put_file(self, repo_name, branch_name, file_content, file_path, cid, commit_message, author_name, author_email):
         return self._client.put_file(
             repositoryName=repo_name,
@@ -71,7 +71,7 @@ class codeCommit:
             name=author_name,
             email=author_email
         )
-
+    # A method to create a repo
     def create_repository(self, repo_name, repo_description):
         return self._client.create_repository(
             repositoryName=repo_name,
