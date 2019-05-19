@@ -4,7 +4,7 @@ from src.codecommit.client_locator import CODECOMMITClient
 def main():
     #TODO: drop all of this code into a method in the code_commit.py class
     #TODO: add the below variables into the class so they are stored in the object
-
+    #TODO: exception handling and unit tests
     author_name = "David"
     author_email = "anemail"
     branch = "master"
