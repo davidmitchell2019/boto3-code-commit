@@ -7,7 +7,7 @@ def main():
     data = "some jason data to post"
     ccommit_client = CODECOMMITClient().get_client()
     cclient = codeCommit(ccommit_client)
-    response = cclient.post_data_to_repo(username, data)
+    cclient.post_data_to_repo(username, data)
 
 if __name__ == '__main__':
     main()
