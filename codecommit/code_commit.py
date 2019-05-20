@@ -5,8 +5,8 @@ from src.codecommit.client_locator import CODECOMMITClient
 
 # A class for putting, commiting and deleting files from AWS code commit
 class codeCommit:
-    parent_commit_id = ""
-    commits = 0
+    parent_commit_id = "f950d62cd4592bd9bd5eac11d649478d1b677371"
+    commits = 1
 
     def __init__(self, client):
         self._client = client
@@ -86,7 +86,7 @@ class codeCommit:
         )
 
     # a method to setup the initial repo, create the file and some logic that will get the parent commit id and allow a new commit using that
-    def post_data_to_repo(self, username, data_to_post, commits):
+    def post_data_to_repo(self, username, data_to_post):
         author_name = username
         author_email = "Billy@Bob.com"
         branch = "master"
@@ -97,7 +97,7 @@ class codeCommit:
         cclient = codeCommit(ccommit_client)
         # if commits = 0 then create a repo and the initial file
         # If the repo is already in use or created this will fail as commit ID can only be empty in an empty repo
-        if (commits == 0):
+        if (codeCommit.commits == 0):
             try:
                 # create terraform repo
                 repos = cclient.create_repository(repo, "A repo for Terraform request response data")
