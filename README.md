@@ -9,3 +9,7 @@ Problem domain Codecommit specific
 You can push a file to code commit if, you have an empty repo or you have the parent commit ID from the previous commit.
 
 So in this code we create an empty repo, push a file and then use that parent commit ID to push any data changes to that file.
+
+Also adding some Dynamo DB boto methods to create a table etc
+
+The variables: commits and parent_commit_id will be stored in a dynamodb table for resiliancy.
