@@ -1,5 +1,6 @@
 import boto3
 import pyboto3
+import sys
 from src.codecommit.client_locator import CODECOMMITClient
 
 # A class for putting, commiting and deleting files from AWS code commit
@@ -110,6 +111,7 @@ class codeCommit:
                 codeCommit.commits += 1
             except:
                 print("directory already exists or is not an empty directory")
+                print("directory already exists or is not an empty directory", file=sys.stderr)
         # if this is the second commit we can use the commit ID
         else:
             try:
@@ -119,4 +121,5 @@ class codeCommit:
                 codeCommit.parent_commit_id = commit_response['commitId']
                 codeCommit.commits += 1
             except:
-                print("we should not get here")
+                print("system error")
+                print("system error", file=sys.stderr)
