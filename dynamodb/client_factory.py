@@ -7,7 +7,7 @@ class ClientFactory:
         # aws_access_key_id = ACCESS_KEY
         # aws_secret_access_key = SECRET_KEY
         # TODO: pass access key and secret key into client locator for authentication
-        
+
     def get_client(self):
         return self._client
 

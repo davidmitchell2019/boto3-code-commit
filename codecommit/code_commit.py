@@ -5,8 +5,8 @@ from src.codecommit.client_locator import CODECOMMITClient
 
 # A class for putting, commiting and deleting files from AWS code commit
 class codeCommit:
-    parent_commit_id = "f950d62cd4592bd9bd5eac11d649478d1b677371"
-    commits = 1
+    parent_commit_id = ""
+    commits = 0
 
     def __init__(self, client):
         self._client = client
